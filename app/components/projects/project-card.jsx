@@ -6,7 +6,6 @@ import { IoLinkSharp } from "react-icons/io5";
 
 // @flow strict
 function ProjectCard({ project }) {
-
   return (
     <Link href={project.html_url} target="_blank">
       <div className="p-8 h-48 flex flex-col justify-between bg-primary-bg">
@@ -36,13 +35,16 @@ function ProjectCard({ project }) {
           <p className="flex items-center gap-2">
             <span
               style={{ backgroundColor: colors[project.language] }}
-              className="w-3 h-3 rounded-full"></span>
-            <span className="text-primary-text text-sm">{project.language}</span>
+              className="w-3 h-3 rounded-full"
+            ></span>
+            <span className="text-primary-text text-sm">
+              {project.language}
+            </span>
           </p>
         </div>
       </div>
     </Link>
   );
-};
+}
 
 export default ProjectCard;
