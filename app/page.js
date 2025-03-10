@@ -19,7 +19,7 @@ async function getGitProfile() {
 
 async function getGitProjects() {
   const res = await fetch(
-    `https://api.github.com/search/repositories?q=user:${userData.githubUser}+fork:false&sort=stars&per_page=10&type=Repositories`
+    `https://api.github.com/search/repositories?q=user:${userData.githubUser}`
   );
 
   if (!res.ok) {
@@ -49,7 +49,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
   const profile = await getGitProfile();
 
   return {
-    title: `GitHub Profile of ${profile.name}`,
+    title: `GitHub Profile of ${profile.login}`,
     description: profile.description,
   };
 }
