@@ -1,4 +1,4 @@
-import { GoogleTagManager } from "@next/third-parties/google";
+// import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
@@ -16,9 +16,9 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
-      {process.env.NEXT_PUBLIC_GTM && (
+      {/* {process.env.NEXT_PUBLIC_GTM && (
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
-      )}
+      )} */}
     </html>
   );
 }
